@@ -1,0 +1,101 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#6366F1" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#2563EB" stop-opacity="0.05"/>
+    </linearGradient>
+    <linearGradient id="screenGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1E293B"/>
+      <stop offset="100%" stop-color="#0F172A"/>
+    </linearGradient>
+    <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#6366F1"/>
+      <stop offset="100%" stop-color="#38BDF8"/>
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- Background Blob -->
+  <path d="M 100,250 C 70,120 180,60 300,80 C 420,100 460,200 430,320 C 400,440 260,450 150,420 C 70,400 130,320 100,250 Z" fill="url(#bgGrad)" />
+
+  <!-- Outer Glow Circle -->
+  <circle cx="250" cy="250" r="180" fill="none" stroke="#6366F1" stroke-width="1.5" stroke-dasharray="8 8" opacity="0.4" />
+
+  <!-- Code Window / Laptop Screen (Main Window) -->
+  <rect x="110" y="130" width="280" height="190" rx="12" fill="url(#screenGrad)" stroke="#334155" stroke-width="2" filter="url(#glow)"/>
+  
+  <!-- Window Header Bar -->
+  <path d="M 110,142 C 110,135.37 115.37,130 122,130 L 378,130 C 384.63,130 390,135.37 390,142 L 390,160 L 110,160 Z" fill="#0F172A" />
+  <circle cx="130" cy="145" r="4" fill="#EF4444"/>
+  <circle cx="144" cy="145" r="4" fill="#F59E0B"/>
+  <circle cx="158" cy="145" r="4" fill="#10B981"/>
+  <rect x="180" y="140" width="140" height="10" rx="5" fill="#1E293B" />
+
+  <!-- Code Syntax Lines -->
+  <!-- Line 1: const app = next(); -->
+  <rect x="130" y="175" width="40" height="6" rx="3" fill="#6366F1"/>
+  <rect x="175" y="175" width="30" height="6" rx="3" fill="#38BDF8"/>
+  <rect x="210" y="175" width="15" height="6" rx="3" fill="#F43F5E"/>
+  <rect x="230" y="175" width="45" height="6" rx="3" fill="#10B981"/>
+
+  <!-- Line 2: return (<Component />) -->
+  <rect x="145" y="192" width="50" height="6" rx="3" fill="#F59E0B"/>
+  <rect x="200" y="192" width="65" height="6" rx="3" fill="#818CF8"/>
+  <rect x="270" y="192" width="30" height="6" rx="3" fill="#38BDF8"/>
+
+  <!-- Line 3: Indented block -->
+  <rect x="160" y="209" width="35" height="6" rx="3" fill="#38BDF8"/>
+  <rect x="200" y="209" width="80" height="6" rx="3" fill="#94A3B8" opacity="0.7"/>
+
+  <!-- Line 4: Nested tag -->
+  <rect x="160" y="226" width="60" height="6" rx="3" fill="#10B981"/>
+  <rect x="225" y="226" width="45" height="6" rx="3" fill="#F43F5E"/>
+
+  <!-- Line 5: DB Query / API -->
+  <rect x="145" y="243" width="70" height="6" rx="3" fill="#818CF8"/>
+  <rect x="220" y="243" width="50" height="6" rx="3" fill="#F59E0B"/>
+
+  <!-- Line 6: Closing tag -->
+  <rect x="130" y="260" width="30" height="6" rx="3" fill="#6366F1"/>
+
+  <!-- Floating Mobile / Responsive Preview (Left) -->
+  <g transform="translate(70, 200)">
+    <rect x="0" y="0" width="70" height="130" rx="10" fill="#0F172A" stroke="#475569" stroke-width="2" />
+    <rect x="5" y="12" width="60" height="106" rx="4" fill="#1E293B" />
+    <circle cx="35" cy="6" r="2" fill="#64748B"/>
+    <rect x="12" y="22" width="46" height="24" rx="4" fill="url(#accentGrad)" opacity="0.8"/>
+    <rect x="12" y="52" width="30" height="4" rx="2" fill="#38BDF8"/>
+    <rect x="12" y="60" width="46" height="3" rx="1.5" fill="#64748B"/>
+    <rect x="12" y="66" width="40" height="3" rx="1.5" fill="#64748B"/>
+    <rect x="12" y="76" width="20" height="16" rx="3" fill="#6366F1" opacity="0.4"/>
+    <rect x="36" y="76" width="22" height="16" rx="3" fill="#10B981" opacity="0.4"/>
+  </g>
+
+  <!-- Floating Database / Cloud Node (Right) -->
+  <g transform="translate(340, 210)">
+    <!-- Cloud / DB Container -->
+    <rect x="0" y="0" width="90" height="110" rx="12" fill="#0F172A" stroke="#6366F1" stroke-width="1.5" />
+    <rect x="12" y="15" width="66" height="20" rx="4" fill="#1E293B" stroke="#38BDF8" stroke-width="1"/>
+    <circle cx="22" cy="25" r="3" fill="#10B981"/>
+    <rect x="32" y="23" width="36" height="4" rx="2" fill="#94A3B8"/>
+
+    <rect x="12" y="45" width="66" height="20" rx="4" fill="#1E293B" stroke="#6366F1" stroke-width="1"/>
+    <circle cx="22" cy="55" r="3" fill="#10B981"/>
+    <rect x="32" y="53" width="36" height="4" rx="2" fill="#94A3B8"/>
+
+    <rect x="12" y="75" width="66" height="20" rx="4" fill="#1E293B" stroke="#F43F5E" stroke-width="1"/>
+    <circle cx="22" cy="85" r="3" fill="#F59E0B"/>
+    <rect x="32" y="83" width="36" height="4" rx="2" fill="#94A3B8"/>
+  </g>
+
+  <!-- Base Desk / Platform -->
+  <path d="M 90,340 L 410,340 L 430,355 L 70,355 Z" fill="url(#accentGrad)" opacity="0.7"/>
+
+  <!-- Floating Tech Orbs -->
+  <circle cx="120" cy="100" r="14" fill="#6366F1" opacity="0.3" />
+  <circle cx="380" cy="110" r="18" fill="#38BDF8" opacity="0.25" />
+  <circle cx="250" cy="80" r="10" fill="#10B981" opacity="0.3" />
+</svg>

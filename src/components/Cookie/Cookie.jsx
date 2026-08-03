@@ -4,33 +4,31 @@ export default function CookieBanner() {
   const [showConsent, setShowConsent] = useState(true);
 
   const onClick = () => {
-    localStorage.setItem("showCookieConsent", false);
+    localStorage.setItem("showCookieConsent", "false");
     setShowConsent(false);
   };
+
   useEffect(() => {
     let toShow = localStorage.getItem("showCookieConsent");
-    setShowConsent(!toShow);
+    if (toShow === "false") {
+      setShowConsent(false);
+    }
   }, []);
+
   if (!showConsent) {
-    return <></>;
+    return null;
   }
 
   return (
-    <div className="flex flex-col items-start justify-between z-10 px-5 py-3 box-border bg-gray-200 md:flex-row md:space-y-0 md:items-stretch md:space-x-2 fixed bottom-0 w-full">
-      <div className="flex items-center text-gray-900 w-full ">
-        <p className="text-sm font-medium">
-          This website uses services that use cookies to analyze traffic.
-          {/*
-          You can learn more about the services we use at
-          our{" "}
-          <a className="text-sm underline hover:text-lightAccent">
-            <Link href="/privacy-policy">privacy policy</Link>
-          </a> */}
+    <div className="flex flex-col sm:flex-row items-center justify-between z-40 px-6 py-4 glass-card border-t border-[var(--border-color)] text-[var(--text-primary)] fixed bottom-0 w-full gap-4 shadow-2xl rounded-none">
+      <div className="flex items-center w-full">
+        <p className="text-sm font-medium leading-normal text-[var(--text-secondary)]">
+          This website uses analytics services that utilize cookies to analyze website traffic and optimize your experience.
         </p>
       </div>
-      <div className="flex justify-end w-full">
+      <div className="flex justify-end shrink-0">
         <button
-          className="p-2 rounded-lg text-sm font-bold text-white uppercase bg-gray-700 whitespace-nowrap"
+          className="btn btn--med btn--theme whitespace-nowrap uppercase tracking-wider text-xs"
           onClick={onClick}
         >
           Got it

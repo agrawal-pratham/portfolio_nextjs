@@ -1,48 +1,51 @@
 import { useEffect, useState } from "react";
 
 export const scrollUP = () => {
-  window["scrollTo"]({ top: 0, behavior: "smooth" });
+  window.scrollTo({ top: 0, behavior: "smooth" });
 };
+
 const ScrollTop = () => {
-  const [isTrue, setIsTrue] = useState(false);
+  const [isVisible, setIsVisible] = useState(false);
+
   useEffect(() => {
-    window.addEventListener("scroll", () => {
-      if (window.scrollY > 100) {
-        setIsTrue(true);
-      } else {
-        setIsTrue(false);
-      }
-    });
-  }, [isTrue]);
+    const handleScroll = () => {
+      setIsVisible(window.scrollY > 200);
+    };
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
-    <div>
-      <button
-        type="button"
-        aria-label="scroll to top"
-        onClick={scrollUP}
-        className={` ${
-          isTrue ? "opacity-100" : "opacity-0"
-        } !fixed bottom-2 end-2 md:end-5 md:bottom-5 duration-500 bg-custom-gradient hover:animate-bounce  rounded-full bg-primary dark:bg-bg_dark dark:hover:bg-bg_dark_2 dark:focus:bg-bg_dark p-3  shadow-md  text-white focus:outline-none focus:ring-0 `}
+    <button
+      type="button"
+      aria-label="Scroll to top"
+      onClick={scrollUP}
+      className={`fixed bottom-16 sm:bottom-5 right-3 sm:right-5 z-40 p-3 rounded-xl transition-all duration-300 shadow-lg border border-[var(--border-color)] ${
+        isVisible
+          ? "opacity-100 translate-y-0 pointer-events-auto"
+          : "opacity-0 translate-y-4 pointer-events-none"
+      }`}
+      style={{
+        backgroundColor: "var(--bg-surface)",
+        color: "var(--accent-primary)",
+      }}
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        strokeWidth={2.5}
+        stroke="currentColor"
+        className="w-4 h-4 sm:w-5 sm:h-5"
       >
-        {isTrue && (
-          <span className="[&>svg]:w-4">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke-width="3"
-              stroke="currentColor"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M4.5 10.5 12 3m0 0 7.5 7.5M12 3v18"
-              />
-            </svg>
-          </span>
-        )}
-      </button>
-    </div>
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          d="M4.5 10.5 12 3m0 0 7.5 7.5M12 3v18"
+        />
+      </svg>
+    </button>
   );
 };
 
