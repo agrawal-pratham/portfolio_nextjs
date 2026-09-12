@@ -43,7 +43,7 @@ export default function Footer() {
   return (
     <footer className="bg-[var(--bg-main)] text-[var(--text-primary)] py-10 sm:py-12 px-4 sm:px-10 md:px-20 border-t border-[var(--border-color)] relative">
       <div className="max-w-6xl mx-auto">
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 sm:gap-10 items-start">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-10 items-start">
           <div>
             <h2 className="font-heading text-lg sm:text-xl font-bold mb-3 text-[var(--text-primary)]">
               Pratham Agrawal
@@ -54,6 +54,30 @@ export default function Footer() {
               Delivering enterprise-grade ServiceNow,
               GenAI, Agentic AI, and full-stack cloud solutions.
             </p>
+          </div>
+
+          <div>
+            <h2 className="font-heading text-base sm:text-lg font-semibold mb-4 text-[var(--text-primary)]">
+              Quick Links
+            </h2>
+            <nav className="grid grid-cols-2 gap-x-4 gap-y-2">
+              {[
+                { href: "/about", label: "About" },
+                { href: "/servicenow", label: "ServiceNow" },
+                { href: "/ai", label: "AI Engineering" },
+                { href: "/projects", label: "Projects" },
+                { href: "/experience", label: "Experience" },
+                { href: "/resume", label: "Resume" },
+              ].map((link) => (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  className="text-[var(--text-secondary)] text-sm hover:text-[var(--accent-primary)] transition-colors duration-200"
+                >
+                  {link.label}
+                </Link>
+              ))}
+            </nav>
           </div>
 
           <div>
