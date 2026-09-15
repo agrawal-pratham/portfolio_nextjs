@@ -122,30 +122,33 @@ export default function WorkExperience() {
                   Jun 2022 - Nov 2024
                 </p>
                 <p className="text-xs sm:text-sm md:text-base text-[var(--text-primary)] mb-2 sm:mb-3 leading-relaxed">
-                  Led the development of a production-grade restaurant discovery
-                  platform for the Israeli market using Next.js, Node.js, Firebase,
-                  and GCP, improving website performance by 30% and customer
-                  engagement by 10%. Successfully migrated the application from
+                  Led the development of Hopa Menu, a production-grade SaaS and NFC-based
+                  restaurant management and food ordering platform for the Israeli market using
+                  Next.js, Node.js, Express, Firebase, and GCP, improving website performance
+                  by 30% and customer engagement by 10%. Successfully migrated the application from
                   React.js to Next.js.
                 </p>
                 <p className="text-xs sm:text-sm md:text-base text-[var(--text-secondary)] mb-4 sm:mb-6 leading-relaxed">
-                  Managed end-to-end development of an advanced LMS portal for
-                  Jamaican teenage students, emphasizing mental health and personal
-                  development. Improved UI designs for usability and accessibility.
-                  Implemented real-time analytics and integrated Razorpay and
-                  WiPay payment services.
+                  Managed end-to-end development of an advanced SCORM-compliant LMS platform
+                  delivering personal development and mental health education.
+                  Engineered 6 specialized user interfaces, integrated Twilio Conversations for 1-on-1
+                  and group chat, built custom audio/video players and PDF viewer, and integrated
+                  Razorpay and WiPay payment services.
                 </p>
                 <div className="flex flex-wrap gap-1.5 sm:gap-2">
                   {[
                     "Next.js",
                     "ReactJS",
                     "Node.js",
+                    "Express.js",
                     "Firebase",
+                    "SCORM",
+                    "Twilio",
+                    "WiPay",
+                    "Razorpay",
                     "Python",
                     "AWS",
                     "Google Cloud Platform",
-                    "Razorpay",
-                    "WiPay",
                   ].map((tech) => (
                     <span key={tech} className="tech-tag">
                       {tech}
