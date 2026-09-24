@@ -1,25 +1,24 @@
-import About from "@/components/About";
 import CookieBanner from "@/components/Cookie/Cookie";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
-import Projects from "@/components/Projects";
-import WorkExperience from "@/components/WorkExperience";
+import HomeSummary from "@/components/HomeSummary";
 import Head from "next/head";
 
 export default function Home() {
   const personSchema = {
     "@context": "https://schema.org",
     "@type": "Person",
+    "@id": "https://agrawalpratham.in/#person",
     name: "Pratham Agrawal",
     alternateName: "Pratham",
-    url: "https://agrawalpratham.in",
+    url: "https://agrawalpratham.in/",
     image: "https://agrawalpratham.in/assets/png/og_img.png",
-    jobTitle: "Associate Consultant",
+    jobTitle: "ServiceNow & AI Engineer",
     worksFor: {
       "@type": "Organization",
       name: "Infosys",
-      url: "https://www.infosys.com",
+      url: "https://www.infosys.com/",
     },
     address: {
       "@type": "PostalAddress",
@@ -31,29 +30,23 @@ export default function Home() {
       "https://github.com/agrawal-pratham",
       "https://www.instagram.com/agrawal___pratham/",
       "https://twitter.com/agrawal_2002",
-      "http://blogs.agrawalpratham.in/",
+      "https://blogs.agrawalpratham.in/",
       "https://solutions.agrawalpratham.in/",
     ],
     description:
-      "Associate Consultant with 4+ years of experience in full-stack development, cloud technologies, and AI-driven automation. Currently delivering enterprise-grade ServiceNow solutions across GenAI, Agentic AI, Now Assist Skills, and AI Agent Studio, architecting scalable intelligent workflows.",
+      "ServiceNow & AI Engineer at Infosys with 4+ years of experience in full-stack development, cloud technologies, and AI-driven automation. Delivering enterprise-grade ServiceNow solutions across GenAI, Agentic AI, Now Assist Skills, and AI Agent Studio.",
     knowsAbout: [
       "ServiceNow",
+      "ServiceNow AI",
       "GenAI",
       "Agentic AI",
-      "Now Assist Skills",
       "AI Agent Studio",
-      "Moveworks",
-      "Glide APIs",
+      "Now Assist",
+      "Glide API",
       "Flow Designer",
-      "UI Builder",
-      "ITIL",
       "Next.js",
-      "ReactJS",
+      "React",
       "Node.js",
-      "Firebase",
-      "GCP",
-      "AWS",
-      "Full Stack Development",
     ],
   };
 
@@ -61,7 +54,7 @@ export default function Home() {
     "@context": "https://schema.org",
     "@type": "WebSite",
     name: "Pratham Agrawal | Portfolio",
-    url: "https://agrawalpratham.in",
+    url: "https://agrawalpratham.in/",
     author: {
       "@type": "Person",
       name: "Pratham Agrawal",
@@ -72,15 +65,12 @@ export default function Home() {
     <div>
       <Head>
         {/* Primary Meta Tags */}
-        <title>Pratham Agrawal | Associate Consultant at Infosys | ServiceNow & AI Engineer</title>
+        <title>Pratham Agrawal | ServiceNow & AI Engineer</title>
         <meta
           name="description"
-          content="Associate Consultant at Infosys, Mumbai with 4+ years of experience in full-stack development, cloud technologies, and AI-driven automation. Delivering enterprise-grade ServiceNow solutions across GenAI, Agentic AI, Now Assist Skills, and AI Agent Studio."
+          content="Pratham Agrawal — ServiceNow & AI Engineer specializing in GenAI, Agentic AI, AI Agent Studio, Now Assist, Glide APIs, and full-stack development."
         />
-        <meta
-          name="keywords"
-          content="Pratham Agrawal, Associate Consultant, Infosys, Infosys Mumbai, ServiceNow, GenAI, Agentic AI, Now Assist Skills, AI Agent Studio, Moveworks, Glide APIs, Flow Designer, UI Builder, ITIL, Full Stack Web Developer, Next.js, ReactJS, Node.js, Firebase, GCP, AWS, Cloud Solutions"
-        />
+
         <meta name="author" content="Pratham Agrawal" />
         <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
 
@@ -104,10 +94,10 @@ export default function Home() {
         <meta property="profile:first_name" content="Pratham" />
         <meta property="profile:last_name" content="Agrawal" />
         <meta property="profile:username" content="agrawalpratham" />
-        <meta property="og:title" content="Pratham Agrawal | Associate Consultant at Infosys" />
+        <meta property="og:title" content="Pratham Agrawal | ServiceNow & AI Engineer" />
         <meta
           property="og:description"
-          content="Associate Consultant at Infosys, Mumbai with 4+ years of experience in full-stack development, cloud technologies, and AI-driven automation. Delivering enterprise-grade ServiceNow solutions across GenAI, Agentic AI, Now Assist Skills, and AI Agent Studio."
+          content="Pratham Agrawal — ServiceNow & AI Engineer specializing in GenAI, Agentic AI, AI Agent Studio, Now Assist, Glide APIs, and full-stack development."
         />
         <meta property="og:image" content="https://agrawalpratham.in/assets/png/og_img.png" />
         <meta property="og:url" content="https://agrawalpratham.in/" />
@@ -116,10 +106,10 @@ export default function Home() {
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@agrawal_2002" />
         <meta name="twitter:creator" content="@agrawal_2002" />
-        <meta name="twitter:title" content="Pratham Agrawal | Associate Consultant at Infosys" />
+        <meta name="twitter:title" content="Pratham Agrawal | ServiceNow & AI Engineer" />
         <meta
           name="twitter:description"
-          content="Associate Consultant at Infosys, Mumbai with 4+ years of experience in full-stack development, cloud technologies, and AI-driven automation. Delivering enterprise-grade ServiceNow solutions across GenAI, Agentic AI, Now Assist Skills, and AI Agent Studio."
+          content="Pratham Agrawal — ServiceNow & AI Engineer specializing in GenAI, Agentic AI, AI Agent Studio, Now Assist, Glide APIs, and full-stack development."
         />
         <meta name="twitter:image" content="https://agrawalpratham.in/assets/png/og_img.png" />
 
@@ -137,9 +127,7 @@ export default function Home() {
       <Header />
       <main>
         <Hero />
-        <About />
-        <WorkExperience />
-        <Projects />
+        <HomeSummary />
         <CookieBanner />
       </main>
       <Footer />

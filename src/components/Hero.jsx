@@ -17,8 +17,8 @@ export default function Hero() {
             </div>
 
             <h1 className="font-heading text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-3 sm:mb-4 leading-tight">
-              Hi, I'm{" "}
               <span className="text-gradient">Pratham Agrawal</span>
+              {" "}— ServiceNow Developer & AI Engineer
             </h1>
 
             <div className="mb-2 sm:mb-3 flex flex-col sm:flex-row items-center md:items-start gap-1 sm:gap-1.5 justify-center md:justify-start">
