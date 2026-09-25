@@ -34,3 +34,9 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# deployment scripts
+git-deploy-15days.js
+scripts/git-deploy-15days.js
+git-deploy*.js
+
