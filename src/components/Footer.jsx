@@ -45,9 +45,9 @@ export default function Footer() {
       <div className="max-w-6xl mx-auto">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-10 items-start">
           <div>
-            <h2 className="font-heading text-lg sm:text-xl font-bold mb-3 text-[var(--text-primary)]">
+            <p className="font-heading text-lg sm:text-xl font-bold mb-3 text-[var(--text-primary)]">
               Pratham Agrawal
-            </h2>
+            </p>
             <p className="text-[var(--text-secondary)] text-sm sm:text-base leading-relaxed max-w-md">
               Associate Consultant at Infosys, Mumbai.
               <br />
@@ -57,9 +57,9 @@ export default function Footer() {
           </div>
 
           <div>
-            <h2 className="font-heading text-base sm:text-lg font-semibold mb-4 text-[var(--text-primary)]">
+            <p className="font-heading text-base sm:text-lg font-semibold mb-4 text-[var(--text-primary)]">
               Quick Links
-            </h2>
+            </p>
             <nav className="grid grid-cols-2 gap-x-4 gap-y-2">
               {[
                 { href: "/about", label: "About" },
@@ -68,6 +68,7 @@ export default function Footer() {
                 { href: "/projects", label: "Projects" },
                 { href: "/experience", label: "Experience" },
                 { href: "/resume", label: "Resume" },
+                { href: "https://blogs.agrawalpratham.in/", label: "Blog" },
               ].map((link) => (
                 <Link
                   key={link.href}
@@ -81,9 +82,9 @@ export default function Footer() {
           </div>
 
           <div>
-            <h2 className="font-heading text-base sm:text-lg font-semibold mb-4 text-[var(--text-primary)]">
+            <p className="font-heading text-base sm:text-lg font-semibold mb-4 text-[var(--text-primary)]">
               Connect With Me
-            </h2>
+            </p>
             <div className="flex flex-wrap gap-3">
               {socialLinks.map((link) => (
                 <Link
