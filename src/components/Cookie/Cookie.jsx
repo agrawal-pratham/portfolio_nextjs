@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 
 export default function CookieBanner() {
-  const [showConsent, setShowConsent] = useState(true);
+  const [showConsent, setShowConsent] = useState(false);
 
   const onClick = () => {
     localStorage.setItem("showCookieConsent", "false");
@@ -9,9 +9,9 @@ export default function CookieBanner() {
   };
 
   useEffect(() => {
-    let toShow = localStorage.getItem("showCookieConsent");
-    if (toShow === "false") {
-      setShowConsent(false);
+    const isDismissed = localStorage.getItem("showCookieConsent") === "false";
+    if (!isDismissed) {
+      setShowConsent(true);
     }
   }, []);
 

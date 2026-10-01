@@ -12,8 +12,9 @@ module.exports = {
         xs: "240px",
       },
       fontFamily: {
-        heading: ["Space Grotesk", "sans-serif"],
-        body: ["DM Sans", "sans-serif"],
+        heading: ["var(--font-space-grotesk)", "Space Grotesk", "sans-serif"],
+        body: ["var(--font-dm-sans)", "DM Sans", "sans-serif"],
+        sans: ["var(--font-dm-sans)", "DM Sans", "sans-serif"],
       },
       colors: {
         slateBg: "var(--bg-main)",

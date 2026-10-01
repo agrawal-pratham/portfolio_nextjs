@@ -82,6 +82,7 @@ export default function Hero() {
                 priority={true}
                 height={500}
                 width={500}
+                sizes="(max-width: 640px) 200px, (max-width: 768px) 220px, 280px"
                 src="/assets/png/me.jpg"
                 className="rounded-2xl border border-[var(--border-color)] shadow-[var(--shadow-card)] animate-float w-full h-auto"
                 alt="Pratham Agrawal — Associate Consultant at Infosys"

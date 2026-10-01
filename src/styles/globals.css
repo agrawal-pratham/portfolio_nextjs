@@ -2,8 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-/* ─── Google Fonts: Space Grotesk + DM Sans ─── */
-@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=DM+Sans:wght@300;400;500;600;700&display=swap");
+/* ─── Typography powered by next/font/google in _app.js ─── */
 
 /* ─── Slate & Signal Color System ─── */
 :root {
@@ -55,13 +54,13 @@ html.light, [data-theme="light"] {
 @layer base {
   html {
     @apply scroll-smooth;
-    font-family: "DM Sans", sans-serif;
+    font-family: var(--font-dm-sans), "DM Sans", sans-serif;
   }
 
   body {
     background-color: var(--bg-main);
     color: var(--text-primary);
-    font-family: "DM Sans", sans-serif;
+    font-family: var(--font-dm-sans), "DM Sans", sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     transition: background-color 350ms cubic-bezier(0.4, 0, 0.2, 1),
