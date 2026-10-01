@@ -1,4 +1,7 @@
 import PageLayout from "@/components/PageLayout";
+import JsonLd from "@/components/JsonLd";
+import { buildBreadcrumbSchema, buildCreativeWorkSchema } from "@/lib/jsonld";
+import seoConfig from "@/lib/seo.config";
 import Link from "next/link";
 import { Fade } from "react-awesome-reveal";
 
@@ -47,11 +50,30 @@ const stakeholderInterfaces = [
 ];
 
 export default function ScormLmsPage() {
+  const canonicalUrl = `${seoConfig.siteUrl}/projects/scorm-lms-platform`;
+  const breadcrumbs = buildBreadcrumbSchema([
+    { name: "Home", url: seoConfig.siteUrl },
+    { name: "Projects", url: `${seoConfig.siteUrl}/projects` },
+    { name: "SCORM LMS", url: canonicalUrl },
+  ]);
+  const creativeWork = buildCreativeWorkSchema({
+    name: "SCORM-Based LMS Platform",
+    description:
+      "An advanced SCORM-compliant learning management system delivering personal development and mental health education, built with React, Node.js, Firebase, Twilio, and WiPay.",
+    url: canonicalUrl,
+    image: `${seoConfig.siteUrl}/assets/og/scorm-lms-platform.png`,
+    keywords: ["React.js", "Node.js", "Firebase", "SCORM", "Twilio", "WiPay", "Redux", "Material UI"],
+  });
+
   return (
     <PageLayout
       title="SCORM-Based LMS Platform | Pratham Agrawal"
       description="Case study: An advanced SCORM-compliant learning management system delivering personal development and mental health education, built with React, Node.js, Firebase, Twilio, and WiPay."
       canonical="/projects/scorm-lms-platform"
+      ogType="article"
+      ogImage={`${seoConfig.siteUrl}/assets/og/scorm-lms-platform.png`}
+      ogImageAlt="SCORM-Based LMS Platform case study by Pratham Agrawal"
+      headChildren={<JsonLd data={[creativeWork, breadcrumbs]} />}
     >
       <div className="px-4 py-12 sm:py-16 sm:px-10 md:px-16 lg:px-20">
         <div className="max-w-4xl mx-auto">

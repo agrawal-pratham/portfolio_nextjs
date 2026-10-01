@@ -1,4 +1,7 @@
 import PageLayout from "@/components/PageLayout";
+import JsonLd from "@/components/JsonLd";
+import { buildBreadcrumbSchema } from "@/lib/jsonld";
+import seoConfig from "@/lib/seo.config";
 import Image from "next/image";
 import Link from "next/link";
 import { Fade, Zoom } from "react-awesome-reveal";
@@ -45,12 +48,19 @@ const projects = [
 ];
 
 export default function ProjectsPage() {
+  const breadcrumbs = buildBreadcrumbSchema([
+    { name: "Home", url: seoConfig.siteUrl },
+    { name: "Projects", url: `${seoConfig.siteUrl}/projects` },
+  ]);
+
   return (
     <PageLayout
       title="Projects | Pratham Agrawal"
       description="Explore Pratham Agrawal's portfolio of projects — restaurant discovery platforms, portfolio sites, and full-stack web applications."
       canonical="/projects"
-      jsonLdType="CollectionPage"
+      ogImage={`${seoConfig.siteUrl}/assets/og/projects.png`}
+      ogImageAlt="Pratham Agrawal — Featured Projects"
+      headChildren={<JsonLd data={[breadcrumbs]} />}
     >
       <div className="px-4 py-12 sm:py-16 sm:px-10 md:px-16 lg:px-20">
         <div className="max-w-6xl mx-auto">

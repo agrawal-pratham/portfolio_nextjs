@@ -1,4 +1,7 @@
 import PageLayout from "@/components/PageLayout";
+import JsonLd from "@/components/JsonLd";
+import { buildAboutPageSchema, buildBreadcrumbSchema } from "@/lib/jsonld";
+import seoConfig from "@/lib/seo.config";
 import Link from "next/link";
 import { Fade, Slide } from "react-awesome-reveal";
 
@@ -34,12 +37,20 @@ const skills = [
 ];
 
 export default function AboutPage() {
+  const breadcrumbs = buildBreadcrumbSchema([
+    { name: "Home", url: seoConfig.siteUrl },
+    { name: "About", url: `${seoConfig.siteUrl}/about` },
+  ]);
+  const aboutPage = buildAboutPageSchema();
+
   return (
     <PageLayout
       title="About Pratham Agrawal | ServiceNow & AI Engineer"
       description="Learn about Pratham Agrawal — ServiceNow & AI Engineer at Infosys, specializing in GenAI, Agentic AI, and full-stack development."
       canonical="/about"
-      jsonLdType="ProfilePage"
+      ogImage={`${seoConfig.siteUrl}/assets/og/about.png`}
+      ogImageAlt="About Pratham Agrawal — ServiceNow & AI Engineer"
+      headChildren={<JsonLd data={[aboutPage, breadcrumbs]} />}
     >
       <div className="px-4 py-12 sm:py-16 sm:px-10 md:px-16 lg:px-20">
         <div className="max-w-4xl mx-auto">

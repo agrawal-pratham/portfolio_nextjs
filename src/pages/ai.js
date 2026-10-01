@@ -1,4 +1,7 @@
 import PageLayout from "@/components/PageLayout";
+import JsonLd from "@/components/JsonLd";
+import { buildBreadcrumbSchema } from "@/lib/jsonld";
+import seoConfig from "@/lib/seo.config";
 import Link from "next/link";
 import { Fade } from "react-awesome-reveal";
 
@@ -37,11 +40,19 @@ const sections = [
 ];
 
 export default function AIPage() {
+  const breadcrumbs = buildBreadcrumbSchema([
+    { name: "Home", url: seoConfig.siteUrl },
+    { name: "AI Engineering", url: `${seoConfig.siteUrl}/ai` },
+  ]);
+
   return (
     <PageLayout
       title="Pratham Agrawal | Generative AI & Agentic AI Engineer"
       description="Pratham Agrawal builds enterprise AI solutions — Generative AI, Agentic AI, AI Agents, Now Assist, AI Agent Studio, and LLM-powered workflows."
       canonical="/ai"
+      ogImage={`${seoConfig.siteUrl}/assets/og/ai.png`}
+      ogImageAlt="Pratham Agrawal — Generative AI & Agentic AI Engineer"
+      headChildren={<JsonLd data={[breadcrumbs]} />}
     >
       <div className="px-4 py-12 sm:py-16 sm:px-10 md:px-16 lg:px-20">
         <div className="max-w-4xl mx-auto">

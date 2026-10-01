@@ -1,4 +1,7 @@
 import PageLayout from "@/components/PageLayout";
+import JsonLd from "@/components/JsonLd";
+import { buildBreadcrumbSchema } from "@/lib/jsonld";
+import seoConfig from "@/lib/seo.config";
 import Link from "next/link";
 import { Fade } from "react-awesome-reveal";
 
@@ -49,11 +52,19 @@ const sections = [
 ];
 
 export default function ServiceNowPage() {
+  const breadcrumbs = buildBreadcrumbSchema([
+    { name: "Home", url: seoConfig.siteUrl },
+    { name: "ServiceNow", url: `${seoConfig.siteUrl}/servicenow` },
+  ]);
+
   return (
     <PageLayout
       title="Pratham Agrawal | ServiceNow Developer & AI Engineer"
       description="Pratham Agrawal's ServiceNow expertise — AI Agent Studio, Now Assist, Glide APIs, Flow Designer, Integration Hub, and enterprise workflow automation."
       canonical="/servicenow"
+      ogImage={`${seoConfig.siteUrl}/assets/og/servicenow.png`}
+      ogImageAlt="Pratham Agrawal — ServiceNow Developer & AI Engineer"
+      headChildren={<JsonLd data={[breadcrumbs]} />}
     >
       <div className="px-4 py-12 sm:py-16 sm:px-10 md:px-16 lg:px-20">
         <div className="max-w-4xl mx-auto">

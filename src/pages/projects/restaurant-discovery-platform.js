@@ -1,4 +1,7 @@
 import PageLayout from "@/components/PageLayout";
+import JsonLd from "@/components/JsonLd";
+import { buildBreadcrumbSchema, buildCreativeWorkSchema } from "@/lib/jsonld";
+import seoConfig from "@/lib/seo.config";
 import Link from "next/link";
 import { Fade } from "react-awesome-reveal";
 
@@ -14,11 +17,30 @@ const techStack = [
 ];
 
 export default function RestaurantPlatformPage() {
+  const canonicalUrl = `${seoConfig.siteUrl}/projects/restaurant-discovery-platform`;
+  const breadcrumbs = buildBreadcrumbSchema([
+    { name: "Home", url: seoConfig.siteUrl },
+    { name: "Projects", url: `${seoConfig.siteUrl}/projects` },
+    { name: "Hopa Menu", url: canonicalUrl },
+  ]);
+  const creativeWork = buildCreativeWorkSchema({
+    name: "Hopa Menu — Restaurant Discovery Platform",
+    description:
+      "A production-grade SaaS and NFC-based restaurant management and food ordering platform for the Israeli market, built with Next.js, Node.js, Express, Firebase, and GCP.",
+    url: canonicalUrl,
+    image: `${seoConfig.siteUrl}/assets/og/restaurant-discovery-platform.png`,
+    keywords: ["Next.js", "Node.js", "Express.js", "Firebase", "GCP", "Material UI", "Tailwind CSS"],
+  });
+
   return (
     <PageLayout
       title="Hopa Menu — Restaurant Discovery Platform | Pratham Agrawal"
       description="Case study: Hopa Menu, a SaaS and NFC-based restaurant management and food ordering platform for the Israeli market, built with Next.js, Node.js, Express, Firebase, and GCP."
       canonical="/projects/restaurant-discovery-platform"
+      ogType="article"
+      ogImage={`${seoConfig.siteUrl}/assets/og/restaurant-discovery-platform.png`}
+      ogImageAlt="Hopa Menu — Restaurant Discovery Platform case study by Pratham Agrawal"
+      headChildren={<JsonLd data={[creativeWork, breadcrumbs]} />}
     >
       <div className="px-4 py-12 sm:py-16 sm:px-10 md:px-16 lg:px-20">
         <div className="max-w-4xl mx-auto">

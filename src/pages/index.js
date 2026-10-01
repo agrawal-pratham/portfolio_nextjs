@@ -3,9 +3,21 @@ import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import HomeSummary from "@/components/HomeSummary";
+import JsonLd from "@/components/JsonLd";
 import Seo from "@/components/Seo";
+import {
+  buildPersonSchema,
+  buildWebSiteSchema,
+  buildProfilePageSchema,
+} from "@/lib/jsonld";
 
 export default function Home() {
+  const jsonLdData = [
+    buildPersonSchema(),
+    buildWebSiteSchema(),
+    buildProfilePageSchema(),
+  ];
+
   return (
     <div>
       <Seo
@@ -26,6 +38,9 @@ export default function Home() {
           name="google-site-verification"
           content="xLgsNqKuFWO2leEq61qdWwQyEJutNxKKEZQX2alS95U"
         />
+
+        {/* JSON-LD: Person + WebSite + ProfilePage @graph */}
+        <JsonLd data={jsonLdData} />
       </Seo>
 
       <Header />

@@ -1,16 +1,26 @@
 import PageLayout from "@/components/PageLayout";
+import JsonLd from "@/components/JsonLd";
+import { buildBreadcrumbSchema } from "@/lib/jsonld";
+import seoConfig from "@/lib/seo.config";
 import Link from "next/link";
 import { Fade } from "react-awesome-reveal";
 
-const RESUME_URL =
-  "https://drive.google.com/file/d/1OVrswJHsqFC_02D2gdEcuPfqEBbmFOj8/view?usp=drive_link";
+const RESUME_URL = seoConfig.resumeUrl;
 
 export default function ResumePage() {
+  const breadcrumbs = buildBreadcrumbSchema([
+    { name: "Home", url: seoConfig.siteUrl },
+    { name: "Resume", url: `${seoConfig.siteUrl}/resume` },
+  ]);
+
   return (
     <PageLayout
       title="Resume | Pratham Agrawal"
       description="View or download Pratham Agrawal's resume — ServiceNow & AI Engineer with 4+ years of full-stack and enterprise platform experience."
       canonical="/resume"
+      ogImage={`${seoConfig.siteUrl}/assets/og/resume.png`}
+      ogImageAlt="Resume — Pratham Agrawal, ServiceNow & AI Engineer"
+      headChildren={<JsonLd data={[breadcrumbs]} />}
     >
       {/* <!-- VERIFY: add a downloadable PDF to public/ for better UX and SEO --> */}
       <div className="px-4 py-12 sm:py-16 sm:px-10 md:px-16 lg:px-20">
