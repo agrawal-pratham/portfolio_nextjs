@@ -94,11 +94,15 @@ export default function Header() {
     >
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         {/* Logo */}
-        <Link href="/" className="flex items-center gap-3 group">
+        <Link
+          href="/"
+          className="flex items-center gap-3 group"
+          aria-label="Pratham Agrawal — Home"
+        >
           <div className="rounded-xl overflow-hidden ring-1 ring-[var(--border-color)] group-hover:ring-[var(--accent-primary)] transition-all duration-300">
             <Image
               src="/assets/png/personal_logo.png"
-              alt="Pratham"
+              alt=""
               width={40}
               height={36}
             />
