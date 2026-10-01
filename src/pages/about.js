@@ -5,36 +5,7 @@ import seoConfig from "@/lib/seo.config";
 import Link from "next/link";
 import { Fade, Slide } from "react-awesome-reveal";
 
-const skills = [
-  { name: "ServiceNow", icon: "https://upload.wikimedia.org/wikipedia/commons/5/57/ServiceNow_logo.svg" },
-  { name: "GenAI", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" },
-  { name: "Agentic AI", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vscode/vscode-original.svg" },
-  { name: "Now Assist Skills", icon: "https://upload.wikimedia.org/wikipedia/commons/5/57/ServiceNow_logo.svg" },
-  { name: "AI Agent Studio", icon: "https://upload.wikimedia.org/wikipedia/commons/5/57/ServiceNow_logo.svg" },
-  { name: "Moveworks", icon: "https://upload.wikimedia.org/wikipedia/commons/5/57/ServiceNow_logo.svg" },
-  { name: "Glide APIs", icon: "https://upload.wikimedia.org/wikipedia/commons/5/57/ServiceNow_logo.svg" },
-  { name: "Flow Designer", icon: "https://upload.wikimedia.org/wikipedia/commons/5/57/ServiceNow_logo.svg" },
-  { name: "UI Builder", icon: "https://upload.wikimedia.org/wikipedia/commons/5/57/ServiceNow_logo.svg" },
-  { name: "ITIL", icon: "https://upload.wikimedia.org/wikipedia/commons/5/57/ServiceNow_logo.svg" },
-  { name: "JavaScript", icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" },
-  { name: "TypeScript", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg" },
-  { name: "React", icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg" },
-  { name: "Next.js", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-original-wordmark.svg" },
-  { name: "Node.js", icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original-wordmark.svg" },
-  { name: "GraphQL", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/graphql/graphql-plain.svg" },
-  { name: "Firebase", icon: "https://cdn4.iconfinder.com/data/icons/google-i-o-2016/512/google_firebase-2-512.png" },
-  { name: "GCP", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/googlecloud/googlecloud-original.svg" },
-  { name: "AWS", icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" },
-  { name: "MongoDB", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-original-wordmark.svg" },
-  { name: "PostgreSQL", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original-wordmark.svg" },
-  { name: "Docker", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original.svg" },
-  { name: "HTML", icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg" },
-  { name: "CSS", icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original-wordmark.svg" },
-  { name: "Tailwind", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg" },
-  { name: "Redux", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/redux/redux-original.svg" },
-  { name: "Git", icon: "https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg" },
-  { name: "Postman", icon: "https://www.vectorlogo.zone/logos/getpostman/getpostman-icon.svg" },
-];
+import skills from "@/lib/skills";
 
 export default function AboutPage() {
   const breadcrumbs = buildBreadcrumbSchema([
@@ -174,7 +145,7 @@ export default function AboutPage() {
                       <div className="icon-box">
                         <img
                           src={skill.icon}
-                          alt={skill.name}
+                          alt={`${skill.name} icon`}
                           width={28}
                           height={28}
                         />
