@@ -1,11 +1,11 @@
 {
-    "name": "Pratham Agrawa | Full Stack Web Developer",
+    "name": "Pratham Agrawal | ServiceNow & AI Engineer",
     "short_name": "Pratham's Portfolio",
     "start_url": "/",
     "orientation": "portrait",
     "scope": "/",
     "offline_enabled": true,
-    "description": "Portfolio website of Pratham Agrawal, Full Stack Web Developer",
+    "description": "Portfolio of Pratham Agrawal, ServiceNow & AI Engineer",
     "icons": [
         {
             "src": "/android-chrome-192x192.png",
@@ -18,7 +18,7 @@
             "type": "image/png"
         }
     ],
-    "theme_color": "#d3f4f7",
-    "background_color": "#d3f4f7",
+    "theme_color": "#12151A",
+    "background_color": "#12151A",
     "display": "standalone"
 }
