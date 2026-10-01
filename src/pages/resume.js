@@ -27,7 +27,7 @@ export default function ResumePage() {
         <div className="max-w-4xl mx-auto">
           <Fade cascade triggerOnce direction="down">
             <h1 className="font-heading text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-8 relative text-center after_style text-[var(--text-primary)]">
-              Resume
+              Resume — Pratham Agrawal
             </h1>
           </Fade>
 

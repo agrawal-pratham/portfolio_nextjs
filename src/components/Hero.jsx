@@ -43,17 +43,17 @@ export default function Hero() {
                 onClick={() => {
                   sendGAEvent({ event: "buttonClicked", value: "Resume" });
                 }}
-                href="https://drive.google.com/file/d/1OVrswJHsqFC_02D2gdEcuPfqEBbmFOj8/view?usp=drive_link"
-                target="_blank"
+                href="/resume"
                 className="btn btn--bg btn--theme text-sm sm:text-base"
               >
                 View Resume
               </Link>
               <Link
-                href="#about"
+                href="/about"
                 className="btn btn--bg btn--theme-inv text-sm sm:text-base"
+                aria-label="Learn more about Pratham Agrawal"
               >
-                Learn More
+                About Me
               </Link>
             </div>
 

@@ -151,8 +151,7 @@ export default function Header() {
           </button>
 
           <Link
-            href="https://drive.google.com/file/d/1OVrswJHsqFC_02D2gdEcuPfqEBbmFOj8/view?usp=drive_link"
-            target="_blank"
+            href="/resume"
             className="ml-2 px-4 py-2 text-sm font-semibold rounded-lg btn--theme shadow-md"
           >
             Resume
@@ -219,8 +218,7 @@ export default function Header() {
           ))}
           <div className="h-px bg-[var(--border-color)] my-2" />
           <Link
-            href="https://drive.google.com/file/d/1OVrswJHsqFC_02D2gdEcuPfqEBbmFOj8/view?usp=drive_link"
-            target="_blank"
+            href="/resume"
             className="block px-4 py-3 rounded-xl text-sm font-semibold text-[var(--accent-primary)] hover:bg-[var(--bg-elevated)] transition-all duration-200"
           >
             📄 Resume
