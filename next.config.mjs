@@ -10,6 +10,11 @@ const nextConfig = {
         destination: "https://agrawalpratham.in/:path*",
         permanent: true,
       },
+      {
+        source: "/blogs",
+        destination: "https://blogs.agrawalpratham.in",
+        statusCode: 301,
+      },
     ];
   },
   async headers() {

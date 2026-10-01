@@ -10,7 +10,7 @@ const navLinks = [
   { href: "/projects", label: "Projects" },
   { href: "/servicenow", label: "ServiceNow" },
   { href: "/ai", label: "AI" },
-  { href: "https://blogs.agrawalpratham.in/", label: "Blogs" },
+  { href: "/blogs", label: "Blogs" },
 ];
 
 export default function Header() {

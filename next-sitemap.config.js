@@ -11,7 +11,7 @@ module.exports = {
   transform: async (config, path) => {
     // Higher priority for key pages
     const highPriority = ["/", "/about", "/servicenow", "/ai"];
-    const medPriority = ["/experience", "/projects"];
+    const medPriority = ["/experience", "/projects", "/blogs"];
     let priority = 0.5;
     if (highPriority.includes(path)) priority = 1.0;
     else if (medPriority.includes(path)) priority = 0.8;

@@ -68,7 +68,7 @@ export default function Footer() {
                 { href: "/projects", label: "Projects" },
                 { href: "/experience", label: "Experience" },
                 { href: "/resume", label: "Resume" },
-                { href: "https://blogs.agrawalpratham.in/", label: "Blog" },
+                { href: "/blogs", label: "Blogs" },
               ].map((link) => (
                 <Link
                   key={link.href}
