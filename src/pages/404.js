@@ -13,6 +13,7 @@ export default function Custom404() {
     { label: "AI Engineering", href: "/ai" },
     { label: "Projects", href: "/projects" },
     { label: "Resume", href: "/resume" },
+    { label: "Blogs", href: "https://blogs.agrawalpratham.in" },
   ];
 
   return (

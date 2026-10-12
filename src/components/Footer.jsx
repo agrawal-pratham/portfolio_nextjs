@@ -68,7 +68,7 @@ export default function Footer() {
                 { href: "/projects", label: "Projects" },
                 { href: "/experience", label: "Experience" },
                 { href: "/resume", label: "Resume" },
-                { href: "/blogs", label: "Blogs" },
+                { href: "https://blogs.agrawalpratham.in", label: "Blogs" },
               ].map((link) => (
                 <Link
                   key={link.href}
@@ -91,7 +91,7 @@ export default function Footer() {
                   key={link.name}
                   href={link.url}
                   target="_blank"
-                  rel="noopener noreferrer"
+                  rel="me noopener noreferrer"
                   className="p-2.5 rounded-xl bg-[var(--bg-surface)] border border-[var(--border-color)] text-[var(--text-secondary)] hover:text-[var(--accent-primary)] hover:border-[var(--accent-primary)] transition-all duration-200 hover:-translate-y-0.5"
                   aria-label={link.name}
                 >
