@@ -51,9 +51,27 @@ export default function Seo({
       <link rel="alternate" hrefLang="en" href={fullCanonical} />
       <link rel="alternate" hrefLang="x-default" href={fullCanonical} />
 
-      {/* Author & Sitemap Discovery */}
+      {/* Author, Sitemap & Feed Discovery */}
       <link rel="author" href={`${seoConfig.siteUrl}/about`} />
       <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml" />
+      <link
+        rel="alternate"
+        type="application/rss+xml"
+        title={`${seoConfig.siteName} — RSS Feed`}
+        href={`${seoConfig.siteUrl}/rss.xml`}
+      />
+      <link
+        rel="alternate"
+        type="application/atom+xml"
+        title={`${seoConfig.siteName} — Atom Feed`}
+        href={`${seoConfig.siteUrl}/atom.xml`}
+      />
+      <link
+        rel="alternate"
+        type="application/feed+json"
+        title={`${seoConfig.siteName} — JSON Feed`}
+        href={`${seoConfig.siteUrl}/feed.json`}
+      />
 
       {/* Resource Hints (Core Web Vitals & Speed Optimization) */}
       <link rel="preconnect" href="https://www.googletagmanager.com" />

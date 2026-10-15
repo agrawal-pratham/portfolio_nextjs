@@ -37,6 +37,16 @@ const socialLinks = [
       </svg>
     ),
   },
+  {
+    name: "RSS Feed",
+    url: "/rss.xml",
+    icon: (
+      <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+        <circle cx="6.18" cy="17.82" r="2.18" />
+        <path d="M4 4.44v2.83c7.03 0 12.73 5.7 12.73 12.73h2.83c0-8.59-6.97-15.56-15.56-15.56zm0 5.66v2.83c3.9 0 7.07 3.17 7.07 7.07h2.83c0-5.46-4.44-9.9-9.9-9.9z" />
+      </svg>
+    ),
+  },
 ];
 
 export default function Footer() {
@@ -69,12 +79,13 @@ export default function Footer() {
                 { href: "/experience", label: "Experience" },
                 { href: "/resume", label: "Resume" },
                 { href: "https://blogs.agrawalpratham.in", label: "Blogs" },
+                { href: "/rss.xml", label: "RSS Feed" },
               ].map((link) => (
                 <Link
                   key={link.href}
                   href={link.href}
-                  {...(link.href.startsWith("http")
-                    ? { target: "_blank", rel: "noopener external" }
+                  {...(link.href.startsWith("http") || link.href.endsWith(".xml")
+                    ? { target: "_blank", rel: "noopener alternate" }
                     : {})}
                   className="text-[var(--text-secondary)] text-sm hover:text-[var(--accent-primary)] transition-colors duration-200"
                 >
@@ -94,7 +105,7 @@ export default function Footer() {
                   key={link.name}
                   href={link.url}
                   target="_blank"
-                  rel="me noopener external"
+                  rel={link.url.startsWith("http") ? "me noopener external" : "alternate"}
                   className="p-2.5 rounded-xl bg-[var(--bg-surface)] border border-[var(--border-color)] text-[var(--text-secondary)] hover:text-[var(--accent-primary)] hover:border-[var(--accent-primary)] transition-all duration-200 hover:-translate-y-0.5"
                   aria-label={link.name}
                 >

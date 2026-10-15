@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+    <channel>
+        <title>Pratham Agrawal | ServiceNow &amp; AI Engineer</title>
+        <link>https://agrawalpratham.in/</link>
+        <description>Engineering insights, enterprise case studies, and technical publications from Pratham Agrawal — ServiceNow &amp; AI Engineer at Infosys specializing in GenAI, Agentic AI, AI Agent Studio, Now Assist, Glide APIs, and full-stack development.</description>
+        <lastBuildDate>Sun, 01 Mar 2026 00:00:00 GMT</lastBuildDate>
+        <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
+        <generator>Next.js &amp; Feed for Node.js</generator>
+        <language>en</language>
+        <image>
+            <title>Pratham Agrawal | ServiceNow &amp; AI Engineer</title>
+            <url>https://agrawalpratham.in/assets/og/home.png</url>
+            <link>https://agrawalpratham.in/</link>
+        </image>
+        <copyright>All rights reserved 2026, Pratham Agrawal</copyright>
+        <item>
+            <title><![CDATA[AI Engineering & Enterprise Agentic Systems]]></title>
+            <link>https://agrawalpratham.in/ai</link>
+            <guid isPermaLink="false">https://agrawalpratham.in/ai</guid>
+            <pubDate>Mon, 20 Jan 2025 09:00:00 GMT</pubDate>
+            <description><![CDATA[Deep dive into enterprise GenAI, autonomous AI agents, ServiceNow Now Assist Skills, and AI Agent Studio integrations for automated workflows.]]></description>
+            <content:encoded><![CDATA[<h2>Generative AI & Agentic Workflows in Enterprise IT</h2>
+      <p>Pratham Agrawal designs and implements production-grade generative AI and agentic systems within enterprise architectures. Leveraging large language models (LLMs) and ServiceNow AI Agent Studio, this work bridges traditional ITSM with autonomous multi-step reasoning.</p>
+      <h3>Key Focus Areas:</h3>
+      <ul>
+        <li><strong>GenAI & LLM Applications:</strong> Production-ready enterprise AI automating complex workflows, generating context-aware summaries, and augmenting human decision-making.</li>
+        <li><strong>Agentic AI & Autonomous Systems:</strong> Multi-step autonomous agents that break down complex enterprise incidents, call internal APIs, and execute resolutions with safety guardrails.</li>
+        <li><strong>ServiceNow AI (Now Assist & AI Agent Studio):</strong> Native platform conversational AI skills, GenAI skills customization, and agent deployment across enterprise catalog and incident workflows.</li>
+        <li><strong>Enterprise AI Integration:</strong> Event-driven architecture connecting AI models with ITSM, ERP, and CRM platforms via REST/SOAP APIs and webhooks.</li>
+      </ul>
+      <p><a href="https://agrawalpratham.in/ai">Explore the full AI Engineering profile →</a></p>]]></content:encoded>
+            <author>pratham@agrawalpratham.in (Pratham Agrawal)</author>
+            <category>Artificial Intelligence</category>
+            <category>Generative AI</category>
+            <category>Agentic AI</category>
+            <category>Now Assist</category>
+            <category>ServiceNow</category>
+            <enclosure url="https://agrawalpratham.in/assets/og/ai.png" length="0" type="image/png"/>
+        </item>
+        <item>
+            <title><![CDATA[ServiceNow Enterprise Architecture & Platform Engineering]]></title>
+            <link>https://agrawalpratham.in/servicenow</link>
+            <guid isPermaLink="false">https://agrawalpratham.in/servicenow</guid>
+            <pubDate>Wed, 20 Nov 2024 10:00:00 GMT</pubDate>
+            <description><![CDATA[Enterprise-grade ServiceNow platform development covering Glide APIs, Flow Designer, Integration Hub, UI Builder, and Automated Test Framework (ATF).]]></description>
+            <content:encoded><![CDATA[<h2>Enterprise ServiceNow Development & Process Automation</h2>
+      <p>Specialized platform architecture, backend scripting, and automated workflow design developed by Pratham Agrawal as an Associate Consultant at Infosys.</p>
+      <h3>Core Competencies:</h3>
+      <ul>
+        <li><strong>Glide API Scripting:</strong> Advanced server-side business rules, script includes, client scripts, and secure GlideRecord / GlideAjax implementations.</li>
+        <li><strong>Flow Designer & Integration Hub:</strong> Complex multi-step flows, spoke configurations, and bi-directional REST/SOAP enterprise integrations.</li>
+        <li><strong>Workspace & UI Builder:</strong> Custom workspace experiences, Service Portal widgets, and role-based interface design.</li>
+        <li><strong>Quality & Test Automation:</strong> Automated Test Framework (ATF) test suites preventing regression across platform upgrades and patch cycles.</li>
+      </ul>
+      <p><a href="https://agrawalpratham.in/servicenow">Read detailed ServiceNow technical competencies →</a></p>]]></content:encoded>
+            <author>pratham@agrawalpratham.in (Pratham Agrawal)</author>
+            <category>ServiceNow</category>
+            <category>Glide APIs</category>
+            <category>Flow Designer</category>
+            <category>ITSM</category>
+            <category>Integration Hub</category>
+            <enclosure url="https://agrawalpratham.in/assets/og/servicenow.png" length="0" type="image/png"/>
+        </item>
+        <item>
+            <title><![CDATA[Case Study: Hopa Menu — NFC & SaaS Restaurant Management Platform]]></title>
+            <link>https://agrawalpratham.in/projects/restaurant-discovery-platform</link>
+            <guid isPermaLink="false">https://agrawalpratham.in/projects/restaurant-discovery-platform</guid>
+            <pubDate>Wed, 15 May 2024 12:00:00 GMT</pubDate>
+            <description><![CDATA[Production-grade SaaS and NFC-based restaurant management and food ordering platform engineered for the Israeli market, built with Next.js, Node.js, Express, Firebase, and GCP.]]></description>
+            <content:encoded><![CDATA[<h2>Hopa Menu: Modernizing F&B Operations with Next.js & GCP</h2>
+      <p>A full-stack, contactless digital menu and ordering platform built for high-throughput restaurant environments in Israel.</p>
+      <h3>Impact & Technical Achievements:</h3>
+      <ul>
+        <li><strong>30% Performance Boost:</strong> Migrated legacy React SPA to Next.js with server-side rendering and edge optimizations.</li>
+        <li><strong>10% Increase in Customer Engagement:</strong> Instant NFC table scanning and streamlined checkout flows.</li>
+        <li><strong>Scalable Cloud Architecture:</strong> Powered by Node.js, Express, Firebase real-time database, Google Cloud Platform, and Tailwind CSS.</li>
+      </ul>
+      <p><a href="https://agrawalpratham.in/projects/restaurant-discovery-platform">Read the comprehensive case study →</a></p>]]></content:encoded>
+            <author>pratham@agrawalpratham.in (Pratham Agrawal)</author>
+            <category>Case Study</category>
+            <category>Next.js</category>
+            <category>Full Stack</category>
+            <category>Firebase</category>
+            <category>Google Cloud Platform</category>
+            <enclosure url="https://agrawalpratham.in/assets/og/restaurant-discovery-platform.png" length="0" type="image/png"/>
+        </item>
+        <item>
+            <title><![CDATA[Case Study: SCORM-Based LMS & Educational Platform]]></title>
+            <link>https://agrawalpratham.in/projects/scorm-lms-platform</link>
+            <guid isPermaLink="false">https://agrawalpratham.in/projects/scorm-lms-platform</guid>
+            <pubDate>Sat, 10 Feb 2024 11:00:00 GMT</pubDate>
+            <description><![CDATA[Enterprise e-learning architecture engineered across 6 dedicated user interfaces, featuring SCORM compliance, Twilio messaging, WiPay and Razorpay payment gateways.]]></description>
+            <content:encoded><![CDATA[<h2>Scalable E-Learning Platform with Role-Based Interfaces</h2>
+      <p>A comprehensive SCORM-compliant learning management system delivering personal development and mental health education.</p>
+      <h3>System Architecture:</h3>
+      <ul>
+        <li><strong>6 Dedicated Role Interfaces:</strong> Tailored portals for Students, Teachers, Parents, School Admins, Content Uploaders, and Super Admins.</li>
+        <li><strong>Real-Time Communication:</strong> Twilio Conversations integration for 1-on-1 and group student-facilitator discussions with multimedia support.</li>
+        <li><strong>Global Payment Gateways:</strong> Seamless multi-currency subscription processing via WiPay and Razorpay.</li>
+        <li><strong>Interactive E-Learning:</strong> Embedded SCORM runtime tracking student milestones, completion rates, and performance analytics.</li>
+      </ul>
+      <p><a href="https://agrawalpratham.in/projects/scorm-lms-platform">Read the LMS platform case study →</a></p>]]></content:encoded>
+            <author>pratham@agrawalpratham.in (Pratham Agrawal)</author>
+            <category>Case Study</category>
+            <category>E-Learning</category>
+            <category>SCORM</category>
+            <category>React</category>
+            <category>Twilio</category>
+            <category>Payment Gateways</category>
+            <enclosure url="https://agrawalpratham.in/assets/og/scorm-lms-platform.png" length="0" type="image/png"/>
+        </item>
+        <item>
+            <title><![CDATA[Professional Career & Engineering History at Infosys & Krishworks]]></title>
+            <link>https://agrawalpratham.in/experience</link>
+            <guid isPermaLink="false">https://agrawalpratham.in/experience</guid>
+            <pubDate>Fri, 01 Nov 2024 08:00:00 GMT</pubDate>
+            <description><![CDATA[Detailed career history of Pratham Agrawal as an Associate Consultant at Infosys and System Software Engineer at Krishworks Technology Labs.]]></description>
+            <content:encoded><![CDATA[<h2>Career Trajectory & Technical Leadership</h2>
+      <p>Pratham Agrawal has over 4 years of professional experience across IT consulting, enterprise ServiceNow engineering, and modern web application development.</p>
+      <h3>Professional Timeline:</h3>
+      <ul>
+        <li><strong>Infosys (Nov 2024 — Present):</strong> Associate Consultant leading ServiceNow AI transformations, GenAI solutions, Now Assist skills, and complex integration projects.</li>
+        <li><strong>Krishworks Technology (Jun 2022 — Nov 2024):</strong> System Software Engineer spearheading core SaaS products including Hopa Menu and the SCORM LMS platform.</li>
+      </ul>
+      <p><a href="https://agrawalpratham.in/experience">View detailed career history and accomplishments →</a></p>]]></content:encoded>
+            <author>pratham@agrawalpratham.in (Pratham Agrawal)</author>
+            <category>Career</category>
+            <category>Infosys</category>
+            <category>ServiceNow</category>
+            <category>Consulting</category>
+            <enclosure url="https://agrawalpratham.in/assets/og/experience.png" length="0" type="image/png"/>
+        </item>
+        <item>
+            <title><![CDATA[About Pratham Agrawal — ServiceNow Developer & AI Engineer]]></title>
+            <link>https://agrawalpratham.in/about</link>
+            <guid isPermaLink="false">https://agrawalpratham.in/about</guid>
+            <pubDate>Mon, 01 Jan 2024 00:00:00 GMT</pubDate>
+            <description><![CDATA[Background narrative, technical skills matrix, educational foundation, and engineering philosophy of Pratham Agrawal.]]></description>
+            <content:encoded><![CDATA[<h2>About Pratham Agrawal</h2>
+      <p>Based in Mumbai, India, Pratham Agrawal is a ServiceNow & AI Engineer passionate about intelligent automation, LLM workflows, and modern web applications.</p>
+      <h3>Technical Mastery:</h3>
+      <ul>
+        <li><strong>ServiceNow:</strong> AI Agent Studio, Now Assist, Glide APIs, Flow Designer, Integration Hub, UI Builder, ATF, Service Portal.</li>
+        <li><strong>AI & ML:</strong> GenAI, Agentic AI, Prompt Engineering, Moveworks, LLM Orchestration, LangChain concepts.</li>
+        <li><strong>Web Engineering:</strong> Next.js, React, Node.js, Express, Firebase, GCP, REST APIs, Tailwind CSS.</li>
+      </ul>
+      <p><a href="https://agrawalpratham.in/about">Learn more about Pratham Agrawal →</a></p>]]></content:encoded>
+            <author>pratham@agrawalpratham.in (Pratham Agrawal)</author>
+            <category>About</category>
+            <category>Biography</category>
+            <category>Skills</category>
+            <category>Portfolio</category>
+            <enclosure url="https://agrawalpratham.in/assets/og/about.png" length="0" type="image/png"/>
+        </item>
+    </channel>
+</rss>

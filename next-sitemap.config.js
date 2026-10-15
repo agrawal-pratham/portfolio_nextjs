@@ -1,7 +1,7 @@
 module.exports = {
   siteUrl: "https://agrawalpratham.in",
   generateRobotsTxt: true,
-  exclude: ["/404"],
+  exclude: ["/404", "/rss.xml", "/feed.xml", "/atom.xml", "/feed.json"],
   robotsTxtOptions: {
     policies: [{ userAgent: "*", allow: "/" }],
     additionalSitemaps: [],
