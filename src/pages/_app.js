@@ -1,9 +1,11 @@
+import { useEffect } from "react";
 import ScrollTop from "@/components/ScrollTop";
 import "@/styles/globals.css";
 import { GoogleAnalytics, GoogleTagManager } from "@next/third-parties/google";
 import { Analytics } from "@vercel/analytics/react";
 import Script from "next/script";
 import { Space_Grotesk, DM_Sans } from "next/font/google";
+import { captureWindowOpenerAnalytics } from "@/lib/analytics";
 
 const spaceGrotesk = Space_Grotesk({
   subsets: ["latin"],
@@ -18,6 +20,15 @@ const dmSans = DM_Sans({
 });
 
 export default function App({ Component, pageProps }) {
+  useEffect(() => {
+    // Expose function globally on window at root level
+    if (typeof window !== "undefined") {
+      window.captureWindowOpenerAnalytics = captureWindowOpenerAnalytics;
+    }
+    // Automatically capture if the website is opened from a different website
+    captureWindowOpenerAnalytics();
+  }, []);
+
   return (
     <div className={`${spaceGrotesk.variable} ${dmSans.variable} font-sans`}>
       <Script id="microsoft-clarity-analytics">

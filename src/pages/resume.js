@@ -40,7 +40,7 @@ export default function ResumePage() {
               <Link
                 href={RESUME_URL}
                 target="_blank"
-                rel="noopener noreferrer"
+                rel="noopener external"
                 className="btn btn--bg btn--theme text-sm sm:text-base"
               >
                 📄 Download Resume (Google Drive)
@@ -148,7 +148,12 @@ export default function ResumePage() {
 
           {/* CTAs */}
           <div className="flex flex-wrap gap-3 justify-center mt-8">
-            <Link href={RESUME_URL} target="_blank" className="btn btn--med btn--theme text-sm">
+            <Link
+              href={RESUME_URL}
+              target="_blank"
+              rel="noopener external"
+              className="btn btn--med btn--theme text-sm"
+            >
               Download Full Resume
             </Link>
             <Link href="/experience" className="btn btn--med btn--theme-inv text-sm">

@@ -46,8 +46,23 @@ export default function Seo({
         content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
       />
 
-      {/* Canonical */}
+      {/* Canonical & Regional Alternates */}
       <link rel="canonical" href={fullCanonical} />
+      <link rel="alternate" hrefLang="en" href={fullCanonical} />
+      <link rel="alternate" hrefLang="x-default" href={fullCanonical} />
+
+      {/* Author & Sitemap Discovery */}
+      <link rel="author" href={`${seoConfig.siteUrl}/about`} />
+      <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml" />
+
+      {/* Resource Hints (Core Web Vitals & Speed Optimization) */}
+      <link rel="preconnect" href="https://www.googletagmanager.com" />
+      <link rel="preconnect" href="https://www.google-analytics.com" />
+      <link rel="preconnect" href="https://www.clarity.ms" />
+      <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
+      <link rel="dns-prefetch" href="https://www.google-analytics.com" />
+      <link rel="dns-prefetch" href="https://www.clarity.ms" />
+      <link rel="dns-prefetch" href="https://blogs.agrawalpratham.in" />
 
       {/* Favicons & Manifest */}
       <link

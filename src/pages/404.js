@@ -56,6 +56,9 @@ export default function Custom404() {
                 <Link
                   key={link.label}
                   href={link.href}
+                  {...(link.href.startsWith("http")
+                    ? { target: "_blank", rel: "noopener external" }
+                    : {})}
                   className="px-3 py-1.5 rounded-lg text-xs sm:text-sm font-medium text-[var(--text-secondary)] hover:text-[var(--text-primary)] hover:bg-[var(--bg-surface)] border border-[var(--border-color)] transition-colors"
                 >
                   {link.label}

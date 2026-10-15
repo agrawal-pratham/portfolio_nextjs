@@ -88,6 +88,7 @@ export default function Projects() {
                         }}
                         href={project.liveLink}
                         target="_blank"
+                        rel="noopener external"
                         className="btn btn--med btn--theme text-xs sm:text-sm"
                       >
                         Live Demo
@@ -102,6 +103,7 @@ export default function Projects() {
                       }}
                       href={project.codeLink}
                       target="_blank"
+                      rel="noopener external"
                       className="btn btn--med btn--theme-inv text-xs sm:text-sm"
                     >
                       View Source

@@ -19,11 +19,11 @@ const seoConfig = {
   locale: "en_US",
   twitterHandle: "@agrawal_2002",
   socialProfiles: {
-    linkedin: "https://www.linkedin.com/in/agrawalpratham/",
+    linkedin: "https://www.linkedin.com/in/agrawalpratham",
     github: "https://github.com/agrawal-pratham",
     twitter: "https://twitter.com/agrawal_2002",
-    instagram: "https://www.instagram.com/agrawal___pratham/",
-    blog: "https://blogs.agrawalpratham.in/",
+    instagram: "https://www.instagram.com/agrawal___pratham",
+    blog: "https://blogs.agrawalpratham.in",
   },
   email: "pratham@agrawalpratham.in",
   resumeUrl:
