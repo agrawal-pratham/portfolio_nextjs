@@ -104,8 +104,8 @@ export default function Footer() {
                 <Link
                   key={link.name}
                   href={link.url}
-                  target="_blank"
-                  rel={link.url.startsWith("http") ? "me noopener external" : "alternate"}
+                  // target="_blank"
+                  rel={link.url.startsWith("http") ? "me noopener nofollow external" : "alternate"}
                   className="p-2.5 rounded-xl bg-[var(--bg-surface)] border border-[var(--border-color)] text-[var(--text-secondary)] hover:text-[var(--accent-primary)] hover:border-[var(--accent-primary)] transition-all duration-200 hover:-translate-y-0.5"
                   aria-label={link.name}
                 >
